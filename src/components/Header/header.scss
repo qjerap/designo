@@ -1,5 +1,11 @@
 @import "../../styles/abstracts/mixins";
 
+.header .header__links {
+  @include respond(phone) {
+    display: none;
+  }
+}
+
 .header {
   margin-top: 6.4rem;
   margin-bottom: 6.4rem;
@@ -7,8 +13,6 @@
   justify-content: space-between;
   align-items: center;
   height: 24px;
-
-  
 
   &__logo {
     img {
@@ -22,10 +26,6 @@
     display: flex;
     list-style-type: none;
     justify-content: space-between;
-
-    @include respond(phone) {
-      display: none;
-    }
   }
   &__link {
     text-transform: uppercase;
