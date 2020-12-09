@@ -1,11 +1,18 @@
 import React from "react";
-import "./tool/i18n";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Home from "./pages/Home";
 
 function App() {
   return (
-    <div>
-        <h1>starter</h1>
-    </div>
+    <Router>
+      <Header />
+      <Switch>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
+    </Router>
   );
 }
 
