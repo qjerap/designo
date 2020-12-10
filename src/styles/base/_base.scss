@@ -11,14 +11,8 @@
   border: none;
 }
 
-*::-webkit-scrollbar {
-  // display: none;
-}
-
 html {
   font-size: 62.5%; //1rem - 10px; 10px/16px = 62.5%
-
-
 
   @include respond(tab-land) {
     font-size: 56.25%;
@@ -42,6 +36,7 @@ body {
   box-sizing: border-box;
   background-color: var(--colorWhite);
   color: var(--colorBlack);
+  user-select: none;
 }
 
 a {

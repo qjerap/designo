@@ -1,0 +1,22 @@
+@import "../../styles/abstracts/mixins";
+
+.links-grid {
+  margin: 5rem 0;
+  height: 100%;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  align-items: center;
+  grid-gap: 2.4rem;
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+}
+
+// .links-grid--1row {
+//     grid-template-rows: 1fr;
+// }
+

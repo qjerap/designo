@@ -11,9 +11,17 @@
   width: fit-content;
   padding: 1.5rem 2.5rem;
   border-radius: 1rem;
+  background-color: var(--colorWhite);
+  transition: all 0.2s;
+
 
   @include respond(tab-port) {
     font-size: 2rem;
     padding: 2rem 3rem;
+  }
+
+  &:hover {
+    background-color: (var(--colorLightPeach));
+    color: var(--colorWhite);
   }
 }

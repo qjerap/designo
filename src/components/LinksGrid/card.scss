@@ -1,0 +1,119 @@
+@import "../../styles/abstracts/mixins";
+
+.card {
+  cursor: pointer;
+  background-color: var(--colorBlack);
+  border-radius: 1rem;
+  width: 100%;
+  height: 30.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+  grid-gap: 2rem;
+
+  @include respond(phone) {
+  }
+
+  &__title,
+  &__link {
+    position: relative;
+    text-transform: uppercase;
+    z-index: 1;
+    color: var(--colorWhite);
+    text-align: center;
+  }
+
+  &__view-projects {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+  }
+
+  &__link {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+  }
+
+  &__link,
+  &__arrow {
+    display: inline-block;
+    z-index: 1;
+  }
+}
+
+.card:hover {
+  background-color: var(--colorLightPeach);
+}
+
+.card:hover [class^="bg"] {
+  opacity: 0.35;
+}
+
+// Grid item placement
+.card.big {
+  min-height: 30.8rem;
+  height: 100%;
+}
+
+.big {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  grid-row-start: 1;
+  grid-row-end: 3;
+}
+
+//   Grid item background img
+.bg-web-design--large {
+  background: url(./assets/desktop/image-web-design-large.jpg);
+
+  @include respond(tab-port) {
+    background: url(./assets/tablet/image-web-design.jpg);
+  }
+
+  @include respond(phone) {
+    background: url(./assets/mobile/image-web-design.jpg);
+  }
+}
+
+.bg-app-design {
+  background: url(./assets/desktop/image-app-design.jpg);
+
+  @include respond(tab-port) {
+    background: url(./assets/tablet/image-app-design.jpg);
+  }
+
+  @include respond(phone) {
+    background: url(./assets/mobile/image-app-design.jpg);
+  }
+}
+
+.bg-graphic-design {
+  background: url(./assets//desktop/image-graphic-design.jpg);
+  @include respond(tab-port) {
+    background: url(./assets/tablet/image-graphic-design.jpg);
+  }
+
+  @include respond(phone) {
+    background: url(./assets/mobile/image-graphic-design.jpg);
+  }
+}
+
+[class*="bg-"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
