@@ -56,27 +56,47 @@ const Footer = () => {
               </div>
               <ul>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.facebook.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={iconFacebook} alt="Facebook" srcset="" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.youtube.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={iconYoutube} alt="Youtube" srcset="" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://twitter.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={iconTwitter} alt="Twitter" srcset="" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.pinterest.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={iconPinterest} alt="Pinterest" srcset="" />
                   </a>
                 </li>
                 <li>
-                  <a href="#">
+                  <a
+                    href="https://www.instagram.com/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <img src={iconInstagram} alt="Instagram" srcset="" />
                   </a>
                 </li>

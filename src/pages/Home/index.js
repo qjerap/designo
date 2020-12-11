@@ -1,5 +1,6 @@
 import React from "react";
 import Hero from "./hero";
+import About from "./about";
 import LinksGrid from "../../components/LinksGrid";
 import Card from "../../components/LinksGrid/card";
 
@@ -12,6 +13,7 @@ const Home = () => {
         <Card text="app design" img="bg-app-design" />
         <Card text="graphic design" img="bg-graphic-design" />
       </LinksGrid>
+      <About />
     </div>
   );
 };

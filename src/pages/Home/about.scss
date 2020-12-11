@@ -1,0 +1,80 @@
+@import "../../styles/abstracts/mixins";
+
+.about {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  margin: 10rem 0;
+
+  @include respond(tab-port) {
+      flex-direction: column;
+  }
+
+  &__card {
+    width: 31.504%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem 0;
+
+    @include respond(tab-port) {
+        flex-direction: row;
+        width: 100%;
+    }
+
+    @include respond(phone) {
+        flex-direction: column;
+    }
+
+    &__content {
+        @include respond(tab-port) {
+            width: 50%;
+            margin-left: 5rem;
+        }
+
+        @include respond(phone) {
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+
+    &__thumbnail {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .thumbnail__svgPattern {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      z-index: -1;
+      background: url(./assets/desktop/bg-pattern-hero-home.svg) no-repeat;
+      background-size: contain;
+      background-position: center;
+      opacity: 0.75;
+
+      &--r270 {
+        transform: rotate(270deg);
+      }
+      &--r180 {
+        transform: rotate(180deg);
+      }
+    }
+
+    &__title,
+    &__description {
+      color: var(--colorDarkGrey);
+    }
+
+    &__title {
+      text-transform: uppercase;
+      margin: 3rem 0;
+    }
+
+    &__description {
+    }
+  }
+}
