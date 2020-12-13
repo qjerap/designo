@@ -1,5 +1,4 @@
 import React from "react";
-import Card from "./card";
 import "./linksgrid.scss";
 
 const LinksGrid = (props) => {

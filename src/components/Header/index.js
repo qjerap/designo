@@ -7,17 +7,19 @@ const Header = () => {
   return (
     <header className=" wrapper wrapper--phonepad header">
       <div className="header__logo">
-        <img src={logo} alt="logo" srcset="" />
+        <Link to="/">
+          <img src={logo} alt="logo" srcset="" />
+        </Link>
       </div>
       <ul className="header__links">
         <li className="header__link">
-          <Link to="#">our company</Link>
+          <Link to="/about">our company</Link>
         </li>
         <li className="header__link">
-          <Link to="#">locations</Link>
+          <Link to="/locations">locations</Link>
         </li>
         <li className="header__link">
-          <Link to="#">contact</Link>
+          <Link to="/contact">contact</Link>
         </li>
       </ul>
     </header>

@@ -1,0 +1,71 @@
+@import "../../styles/abstracts/mixins";
+
+.portfolio__card {
+  cursor: pointer;
+  position: relative;
+  width: 30%;
+  height: 100%;
+  background-color: lighten($color: #ffad9b, $amount: 15%);
+  display: flex;
+  flex-direction: column;
+  border-radius: 1rem;
+  overflow: hidden;
+  margin-bottom: 5rem;
+
+  &:hover {
+    background-color: var(--colorPeach);
+
+    p, h3 {
+
+        color: var(--colorWhite);
+    }
+  }
+
+  @include respond(tab-port) {
+    flex-direction: row;
+    height: 42rem;
+    width: 100%;
+  }
+
+  @include respond(phone) {
+    flex-direction: column;
+    width: 100%;
+    height: 100%;
+  }
+
+  &__thumbnail {
+    @include respond(tab-port) {
+      width: 50%;
+    }
+    @include respond(phone) {
+      width: 100%;
+      height: 100%;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  &__content {
+    min-height: 15.8rem;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    h3 {
+      text-transform: uppercase;
+      margin-bottom: 5%;
+      color: var(--colorPeach);
+    }
+
+    p {
+      width: 80%;
+      color: var(--colorBlack);
+    }
+  }
+}
