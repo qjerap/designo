@@ -9,7 +9,7 @@ const Home = () => {
     <div className="home wrapper">
       <Hero />
       <LinksGrid>
-        <Card text="web design" placement="big" img="bg-web-design--large" />
+        <Card text="web design" placement="big" img="bg-web-design" />
         <Card text="app design" img="bg-app-design" />
         <Card text="graphic design" img="bg-graphic-design" />
       </LinksGrid>

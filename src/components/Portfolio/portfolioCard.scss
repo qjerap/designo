@@ -1,6 +1,11 @@
 @import "../../styles/abstracts/mixins";
 
 .portfolio__card {
+  &:last-of-type {
+    
+    
+  }
+
   cursor: pointer;
   position: relative;
   width: 30%;
@@ -15,9 +20,9 @@
   &:hover {
     background-color: var(--colorPeach);
 
-    p, h3 {
-
-        color: var(--colorWhite);
+    p,
+    h3 {
+      color: var(--colorWhite);
     }
   }
 
