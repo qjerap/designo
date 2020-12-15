@@ -48,6 +48,7 @@
 
     div {
       max-width: 45rem;
+      // width: 80%;
       margin: 5rem 9.5rem;
       display: flex;
       flex-direction: column;
@@ -56,6 +57,7 @@
       @include respond(tab-port) {
         align-items: center;
         margin: 5rem 9.5rem 0rem;
+        width: 80%;
 
         &:last-of-type {
           margin-bottom: 5rem;

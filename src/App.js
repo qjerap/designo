@@ -2,10 +2,17 @@ import React from "react";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+
+//PAGES
 import Home from "./pages/Home";
+import GraphicDesign from "./pages/GraphicDesign";
 import WebDesign from "./pages/WebDesign";
 import AppDesign from "./pages/AppDesign";
-import GraphicDesign from "./pages/GraphicDesign";
+import Locations from "./pages/Locations";
+import Contact from "./pages/Contact";
+import About from "./pages/About";
+
+//UTILITY
 import ScrollToTop from "./tool/ScrollToTop";
 
 /* ##=> TODO <=##
@@ -28,6 +35,15 @@ function App() {
         </Route>
         <Route path="/graphicdesign">
           <GraphicDesign />
+        </Route>
+        <Route path="/about">
+          <About />
+        </Route>
+        <Route path="/locations">
+          <Locations />
+        </Route>
+        <Route path="/contact">
+          <Contact />
         </Route>
         <Route path="/">
           <Home />

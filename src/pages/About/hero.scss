@@ -1,0 +1,82 @@
+@import "../../styles//abstracts/mixins";
+
+.about__hero {
+  width: 100%;
+  height: 48rem;
+  background-color: var(--colorPeach);
+  color: var(--colorWhite);
+  border-radius: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+  margin: 6.4rem 0;
+
+  @include respond(tab-port) {
+    flex-direction: column-reverse;
+    height: 68.9rem;
+  }
+
+  @include respond(phone) {
+    border-radius: 0;
+  }
+
+  &__content-container {
+    width: 55%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    background: url(./assets/desktop/bg-pattern-hero-about-desktop.svg)
+      no-repeat;
+    background-position: bottom;
+    background-size: cover;
+
+    @include respond(tab-port) {
+      width: 100%;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      background-position: left;
+    }
+  }
+
+  &__content {
+    width: 84%;
+    height: 21rem;
+
+    @include respond(tab-port) {
+      width: 80%;
+    }
+
+    h1 {
+      margin-bottom: 3.2rem;
+    }
+
+    p {
+      width: 45.8rem;
+      @include respond(tab-port) {
+        width: 100%;
+      }
+    }
+  }
+
+  &__image {
+    width: 45%;
+    height: 100%;
+    background: url(./assets/desktop/image-about-hero.jpg) no-repeat;
+    background-size: cover;
+
+    @include respond(tab-port) {
+      width: 100%;
+      height: 100%;
+      background: url(./assets/tablet/image-about-hero.jpg) no-repeat;
+      background-size: cover;
+    }
+
+    @include respond(phone) {
+      background: url(./assets/mobile/image-about-hero.jpg) no-repeat;
+      background-size: cover;
+    }
+  }
+}
