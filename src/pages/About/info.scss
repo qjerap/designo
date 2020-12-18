@@ -59,7 +59,7 @@
   &__image {
     width: 45%;
     height: 100%;
-    background-size: cover;
+    background-size: contain;
 
     @include respond(tab-port) {
       width: 100%;
@@ -71,12 +71,11 @@
 .world-class-talent {
   .about__info__image {
     background: url(./assets/desktop/image-world-class-talent.jpg) no-repeat;
-
+    background-size: cover;
 
     @include respond(tab-port) {
       background: url(./assets/tablet/image-world-class-talent.jpg) no-repeat;
       background-size: cover;
-
     }
   }
 }
@@ -86,11 +85,11 @@
 
   .about__info__image {
     background: url(./assets/desktop/image-real-deal.jpg) no-repeat;
+    background-size: cover;
 
     @include respond(tab-port) {
       background: url(./assets/tablet/image-real-deal.jpg) no-repeat;
       background-size: cover;
-
     }
   }
 }

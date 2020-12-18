@@ -1,0 +1,63 @@
+@import "../../styles//abstracts/mixins";
+
+.locations {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  margin: 6.4rem 0;
+
+  @include respond(tab-port) {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__card {
+    margin: 6.4rem 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 31.504%;
+    height: 36.4rem;
+    text-align: center;
+
+    @include respond(tab-port) {
+     height: 43rem;
+     justify-content: space-between;
+     width: 100%;
+    }
+
+    &__content {
+      h3 {
+        margin-bottom: 3.2rem;
+      }
+    }
+
+    &__thumbnail {
+      position: relative;
+    }
+  }
+
+  .thumbnail__svgPattern {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    background: url(../assets/bg-pattern-small-circle.svg) no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.75;
+
+    &--r90 {
+      transform: rotate(90deg);
+    }
+    &--r180 {
+      transform: rotate(180deg);
+    }
+    &--r270 {
+      transform: rotate(270deg);
+    }
+  }
+}

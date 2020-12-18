@@ -14,6 +14,15 @@
   background-color: var(--colorWhite);
   transition: all 0.2s;
 
+  &--on-light {
+    background-color: var(--colorPeach);
+    color: var(--colorWhite);
+
+    &:hover {
+      background-color: var(--colorLightPeach);
+    }
+  }
+
 
   @include respond(tab-port) {
     font-size: 2rem;
