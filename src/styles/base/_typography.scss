@@ -11,6 +11,12 @@ a, textarea {
   color: var(--colorWhite);
 }
 
+li {
+  font-family: "Jost", sans-serif;
+  font-weight: 400;
+  line-height: 2.6rem;
+}
+
 p, textarea, input {
   font-size: 1.6rem;
 }

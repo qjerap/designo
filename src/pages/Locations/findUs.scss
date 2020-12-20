@@ -6,7 +6,7 @@
   margin: 3.2rem 0;
 
   &:nth-of-type(even) {
-      flex-direction: row-reverse;
+    flex-direction: row-reverse;
   }
 
   &__info,
@@ -17,13 +17,46 @@
   &__info {
     width: 65%;
     height: 100%;
-    background-color: lighten($color: #ffad9b, $amount: 15%);
+    background: url("./assets/desktop/bg-pattern-two-circles.svg") no-repeat
+      lighten($color: #ffad9b, $amount: 15%);
+    background-position: left bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    &__country {
+      width: 80%;
+      margin-bottom: 2.4rem;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+      color: var(--colorPeach);
+    }
+
+    &__address {
+      width: 80%;
+      display: flex;
+      font-size: 1.6rem;
+
+      ul {
+        width: 50%;
+      }
+
+      li:first-of-type {
+        font-weight: 700;
+      }
+
+      li {
+        list-style-type: none;
+        color: var(--colorBlack);
+      }
+    }
   }
 
   &__map {
     width: calc(35% - 3rem);
     height: 100%;
-    background-color: red;
     overflow: hidden;
 
     img {
