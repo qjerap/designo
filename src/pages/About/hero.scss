@@ -3,7 +3,10 @@
 .about__hero {
   width: 100%;
   height: 48rem;
-  background-color: var(--colorPeach);
+  background: var(--colorPeach)
+    url(./assets/desktop/bg-pattern-hero-about-desktop.svg) no-repeat;
+  background-position: -5% bottom;
+  background-size: auto;
   color: var(--colorWhite);
   border-radius: 1rem;
   display: flex;
@@ -15,10 +18,17 @@
   @include respond(tab-port) {
     flex-direction: column-reverse;
     height: 68.9rem;
+
+    &--flex-reverse {
+      flex-direction: column;
+      padding: 5rem 0;
+      height: fit-content;
+    }
   }
 
   @include respond(phone) {
     border-radius: 0;
+    margin-bottom: 0;
   }
 
   &__content-container {
@@ -27,10 +37,6 @@
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    background: url(./assets/desktop/bg-pattern-hero-about-desktop.svg)
-      no-repeat;
-    background-position: bottom;
-    background-size: cover;
 
     @include respond(tab-port) {
       width: 100%;

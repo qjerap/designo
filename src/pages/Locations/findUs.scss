@@ -1,0 +1,35 @@
+.find-us {
+  width: 100%;
+  height: 32.6rem;
+  display: flex;
+  justify-content: space-between;
+  margin: 3.2rem 0;
+
+  &:nth-of-type(even) {
+      flex-direction: row-reverse;
+  }
+
+  &__info,
+  &__map {
+    border-radius: 1rem;
+  }
+
+  &__info {
+    width: 65%;
+    height: 100%;
+    background-color: lighten($color: #ffad9b, $amount: 15%);
+  }
+
+  &__map {
+    width: calc(35% - 3rem);
+    height: 100%;
+    background-color: red;
+    overflow: hidden;
+
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+}
