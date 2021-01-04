@@ -19,24 +19,27 @@ const data = {
   australia: {
     img: ImgAustralia,
     country: "Australia",
-    loc1: "Designo Central Office",
-    loc2: "3886 Wellington Street",
-    loc3: "Toronto, Ontario M9C 3J5",
+    loc1: "Designo AU Office",
+    loc2: "19 Balonne Street",
+    loc3: "New South Wales 2443",
     contact1: "Contact",
-    contact2: "P : +1 253-863-8967",
-    contact3: "M : contact@designo.co",
+    contact2: "P : (02) 6720 9092",
+    contact3: "M : contact@designo.au",
   },
   uk: {
     img: ImgUnitedKingdom,
     country: "United Kingdom",
-    loc1: "Designo Central Office",
-    loc2: "3886 Wellington Street",
-    loc3: "Toronto, Ontario M9C 3J5",
+    loc1: "Designo UK Office",
+    loc2: "13  Colorado Way",
+    loc3: "Rhyd-y-fro SA8 9GA",
     contact1: "Contact",
-    contact2: "P : +1 253-863-8967",
+    contact2: "P : 078 3115 1400",
     contact3: "M : contact@designo.co",
   },
 };
+
+
+
 
 const FindUs = ({ loc }) => {
   const { img, country, loc1, loc2, loc3, contact1, contact2, contact3 } = data[
