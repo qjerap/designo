@@ -6,11 +6,17 @@
   height: 20px;
   width: 24px;
   margin-right: 8px;
-  background: url(./assets/icon-hamburger.svg) no-repeat;
 
   @include respond(phone) {
     display: block;
   }
+}
+
+.header__burger--open {
+  background: url(./assets/icon-hamburger.svg) no-repeat;
+}
+.header__burger--close {
+  background: url(./assets/icon-close.svg) no-repeat;
 }
 
 .burger--open {
@@ -28,8 +34,6 @@
   justify-content: space-between;
   align-items: center;
   height: 155px;
-
-
 
   @include respond(phone) {
     height: 96px;
@@ -55,4 +59,36 @@
     line-height: 14px;
     // color: var(--colorBlack);
   }
+}
+
+//MOBILE NAV
+
+.mobile__nav {
+  height: 0px;
+  // height: 235px;
+  width: 100%;
+  background-color: var(--colorBlack);
+  transition: all 0.2s;
+
+  &--open {
+    height: 235px;
+  }
+}
+
+.mobile__nav .header__links {
+  display: none;
+  height: 100%;
+  width: 100%;
+  justify-content: space-evenly;
+  align-items: flex-start;
+  flex-direction: column;
+  margin-left: 24px;
+}
+
+.mobile__nav .header__link {
+  color: white;
+  font-size: 24px;
+}
+.mobile__nav--open .header__links {
+  display: flex;
 }
