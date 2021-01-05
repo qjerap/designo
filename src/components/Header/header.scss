@@ -1,5 +1,22 @@
 @import "../../styles/abstracts/mixins";
 
+.header__burger {
+  cursor: pointer;
+  display: none;
+  height: 20px;
+  width: 24px;
+  margin-right: 8px;
+  background: url(./assets/icon-hamburger.svg) no-repeat;
+
+  @include respond(phone) {
+    display: block;
+  }
+}
+
+.burger--open {
+  background: url(./assets/icon-close.svg) no-repeat;
+}
+
 .header .header__links {
   @include respond(phone) {
     display: none;
@@ -7,12 +24,16 @@
 }
 
 .header {
-  margin-top: 6.4rem;
-  margin-bottom: 6.4rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 24px;
+  height: 155px;
+
+
+
+  @include respond(phone) {
+    height: 96px;
+  }
 
   &__logo {
     img {
@@ -33,6 +54,5 @@
     letter-spacing: 2px;
     line-height: 14px;
     // color: var(--colorBlack);
-
   }
 }

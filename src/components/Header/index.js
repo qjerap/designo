@@ -11,6 +11,7 @@ const Header = () => {
           <img src={logo} alt="logo" srcset="" />
         </Link>
       </div>
+
       <ul className="header__links">
         <li className="header__link">
           <Link to="/about">our company</Link>
@@ -22,6 +23,12 @@ const Header = () => {
           <Link to="/contact">contact</Link>
         </li>
       </ul>
+
+      <div className="header__burger">
+          
+      </div>
+
+
     </header>
   );
 };
