@@ -1,17 +1,32 @@
+@import "../../styles/abstracts/mixins";
+
 .find-us {
   width: 100%;
-  height: 32.6rem;
+  height: 32rem;
   display: flex;
   justify-content: space-between;
-  margin: 3.2rem 0;
+  margin-bottom: 4rem;
+
+  @include respond(phone) {
+    height: 710px;
+    flex-direction: column-reverse;
+  }
 
   &:nth-of-type(even) {
     flex-direction: row-reverse;
+
+    @include respond(phone) {
+      flex-direction: column-reverse;
+    }
   }
 
   &__info,
   &__map {
     border-radius: 1rem;
+
+    @include respond(phone) {
+      border-radius: 0;
+    }
   }
 
   &__info {
@@ -25,13 +40,23 @@
     justify-content: center;
     align-items: center;
 
+    @include respond(phone) {
+      width: 100%;
+      height: 394px;
+    }
+
     &__country {
       width: 80%;
       margin-bottom: 2.4rem;
+      color: var(--colorPeach);
+
+      @include respond(phone) {
+        text-align: center;
+        margin-bottom: 4rem;
+      }
       &::first-letter {
         text-transform: uppercase;
       }
-      color: var(--colorPeach);
     }
 
     &__address {
@@ -39,8 +64,17 @@
       display: flex;
       font-size: 1.6rem;
 
+      @include respond(phone) {
+        flex-direction: column;
+        align-items: center;
+      }
+
       ul {
         width: 50%;
+
+        @include respond(phone) {
+          margin-bottom: 4rem;
+        }
       }
 
       li:first-of-type {
@@ -58,6 +92,11 @@
     width: calc(35% - 3rem);
     height: 100%;
     overflow: hidden;
+
+    @include respond(phone) {
+      width: 100%;
+      height: 320px;
+    }
 
     img {
       height: 100%;
