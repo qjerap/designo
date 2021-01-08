@@ -3,6 +3,7 @@ import Button from "../Button";
 import SvgCanada from "./assets/illustration-canada.svg";
 import SvgAustralia from "./assets/illustration-australia.svg";
 import SvgUnitedKingdom from "./assets/illustration-united-kingdom.svg";
+import {Link} from "react-router-dom";
 
 import "./locations.scss";
 
@@ -17,7 +18,9 @@ const Locations = () => {
         </div>
         <div className="locations__card__content">
           <h3 className="locations__card__country">CANADA</h3>
-          <Button type="button button--on-light" text="see location"/>
+          <Link to="/locations#Canada">
+            <Button type="button button--on-light" text="see location"/>
+          </Link>
         </div>
       </div>
 
@@ -28,7 +31,9 @@ const Locations = () => {
         </div>
         <div className="locations__card__content">
           <h3 className="locations__card__country">AUSTRALIA</h3>
-          <Button type="button button--on-light" text="see location"/>
+          <Link to="/locations#Australia">
+            <Button type="button button--on-light" text="see location"/>
+          </Link>
         </div>
       </div>
       <div className="locations__card">
@@ -38,7 +43,9 @@ const Locations = () => {
         </div>
         <div className="locations__card__content">
           <h3 className="locations__card__country">UNITED KINGDOM</h3>
-          <Button type="button button--on-light" text="see location"/>
+          <Link to="/locations#UnitedKingdom">
+            <Button type="button button--on-light" text="see location"/>
+          </Link>
         </div>
       </div>
     </section>

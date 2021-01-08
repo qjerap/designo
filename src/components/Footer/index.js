@@ -23,23 +23,27 @@ const Footer = () => {
               </p>
             </div>
             <div>
-              <Button text="get in touch" />
+              <Link to="/contact">
+                <Button text="get in touch" />
+              </Link>
             </div>
           </div>
           <div className="footer__info">
             <div className="footer__info__top">
               <div className="header__logo">
-                <img src={logo} alt="logo" srcset="" />
+                <Link to="/">
+                  <img src={logo} alt="logo" srcset="" />
+                </Link>
               </div>
               <ul className="header__links">
                 <li className="header__link">
-                  <Link to="#">our company</Link>
+                  <Link to="/about">our company</Link>
                 </li>
                 <li className="header__link">
-                  <Link to="#">locations</Link>
+                  <Link to="/locations">locations</Link>
                 </li>
                 <li className="header__link">
-                  <Link to="#">contact</Link>
+                  <Link to="/contact">contact</Link>
                 </li>
               </ul>
             </div>

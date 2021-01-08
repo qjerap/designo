@@ -46,7 +46,7 @@ const FindUs = ({ loc }) => {
     loc
   ];
   return (
-    <div id="canada" className="find-us wrapper">
+    <div id={country.replace(/ /g, '')} className="find-us wrapper">
       <div className="find-us__info">
         <h1 className="find-us__info__country">{country}</h1>
         <div className="find-us__info__address">

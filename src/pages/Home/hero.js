@@ -3,6 +3,7 @@ import "./hero.scss";
 import bgCircleShape from "./assets/desktop/bg-pattern-hero-home.svg";
 import bgPhoneImg from "./assets/desktop/image-hero-phone.png";
 import Button from "../../components/Button";
+import { Link } from "react-router-dom";
 
 const Hero = () => {
   return (
@@ -19,7 +20,9 @@ const Hero = () => {
             fully responsive websites, app design, and engaging brand
             experiences. Find out more about services.
           </p>
-          <Button text="Learn More" />
+          <Link to="/about">
+            <Button text="Learn More" />
+          </Link>
         </div>
       </div>
       <div className="hero__image-container">
