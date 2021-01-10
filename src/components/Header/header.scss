@@ -52,12 +52,32 @@
     list-style-type: none;
     justify-content: space-between;
   }
+
   &__link {
+    position: relative;
     text-transform: uppercase;
     font-size: 1.4rem;
     letter-spacing: 2px;
     line-height: 14px;
-    // color: var(--colorBlack);
+
+    &::after {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      display: inline-block;
+      content: "";
+      width: 0%;
+      height: 5px;
+      border-bottom: 1px solid;
+      transition: 0.35s all ease-out;
+      color: lighten($color: black, $amount: 70);
+    }
+  }
+
+  &__link:hover {
+    &::after {
+      width: 100%;
+    }
   }
 }
 
