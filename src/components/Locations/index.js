@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React from "react";
 import Button from "../Button";
 import SvgCanada from "./assets/illustration-canada.svg";
 import SvgAustralia from "./assets/illustration-australia.svg";
@@ -16,9 +16,7 @@ const Locations = () => {
         <div className="locations__card__thumbnail">
           <div className="thumbnail__svgPattern thumbnail__svgPattern--r90"></div>
 
-          <Suspense fallback={locPlaceholder}>
             <img src={SvgCanada} alt="" />
-          </Suspense>
         </div>
         <div className="locations__card__content">
           <h3 className="locations__card__country">CANADA</h3>
