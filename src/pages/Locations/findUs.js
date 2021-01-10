@@ -1,38 +1,9 @@
 import React, { Suspense } from "react";
 import "./findUs.scss";
-
 import ImgCanada from "./assets/desktop/image-map-canada.png";
 import ImgAustralia from "./assets/desktop/image-map-australia.png";
 import ImgUnitedKingdom from "./assets/desktop/image-map-united-kingdom.png";
-
-
-const SuspenseImg = ({ src, ...rest }) => {
-  imgCache.read(src);
-  return <img src={src} {...rest} />;
-};
-
-
-const imgCache = {
-  __cache: {},
-  read(src) {
-    if (!this.__cache[src]) {
-      this.__cache[src] = new Promise((resolve) => {
-        const img = new Image();
-        img.onload = () => {
-          this.__cache[src] = true;
-          resolve(this.__cache[src]);
-        };
-        img.src = src;
-      }).then((img) => {
-        this.__cache[src] = true;
-      });
-    }
-    if (this.__cache[src] instanceof Promise) {
-      throw this.__cache[src];
-    }
-    return this.__cache[src];
-  }
-};
+import SuspenseImg from "../../tool/SuspenseImg";
 
 
 const data = {
@@ -90,6 +61,7 @@ const FindUs = ({ loc }) => {
         </div>
       </div>
       <div className="find-us__map">
+      
         <Suspense fallback={<div className="suspense-placeholder"></div>}>
           <SuspenseImg src={img} alt={`our location in ${country}`}/>
         

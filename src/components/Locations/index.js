@@ -7,7 +7,6 @@ import { Link } from "react-router-dom";
 
 import "./locations.scss";
 
-const locPlaceholder = <h3>Loading</h3>;
 
 const Locations = () => {
   return (
