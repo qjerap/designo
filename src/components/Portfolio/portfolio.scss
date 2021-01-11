@@ -1,18 +1,18 @@
-.portfolio {
-    display: flex;
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    margin: 4rem 0;
+@import "../../styles/abstracts/mixins";
 
-    gap: 4rem;
-    // display: inline-flex;
-    // flex-wrap: wrap;
-    // margin: -12px 0 0 -12px;
-    // width: calc(100% + 12px);
+.portfolio {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin: 16rem 0;
+  gap: 4rem;
+
+  @include respond(tab-port) {
+    margin: 12rem 0;
+  }
 }
 
 .portfolio > * {
-    // margin: 12px 0 0 12px;
-
+  // margin: 12px 0 0 12px;
 }
