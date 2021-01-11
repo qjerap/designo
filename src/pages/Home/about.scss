@@ -4,10 +4,12 @@
   display: flex;
   justify-content: space-between;
   text-align: center;
-  margin: 10rem 0;
+  margin: 16rem 0;
 
   @include respond(tab-port) {
       flex-direction: column;
+      margin: 12rem 0;
+
   }
 
   &__card {
