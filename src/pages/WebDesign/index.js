@@ -12,25 +12,28 @@ const fetchedData = [...fetchData()];
 
 const WebDesign = () => {
   return (
-    <div className="web-design wrapper">
-      <DesignHero />
-      <Portfolio>
-        {fetchedData.map((data) => {
-          return (
-            <PortfolioCard
-              key={data.title}
-              img={data.image}
-              title={data.title}
-              description={data.description}
-            />
-          );
-        })}
-      </Portfolio>
-      <LinksGrid>
-        <Card text="app design" img="bg-app-design" />
-        <Card text="graphic design" img="bg-graphic-design" />
-      </LinksGrid>
-    </div>
+    <React.Fragment>
+      <div className="bgLeaf"></div>
+      <div className="web-design wrapper">
+        <DesignHero />
+        <Portfolio>
+          {fetchedData.map((data) => {
+            return (
+              <PortfolioCard
+                key={data.title}
+                img={data.image}
+                title={data.title}
+                description={data.description}
+              />
+            );
+          })}
+        </Portfolio>
+        <LinksGrid>
+          <Card text="app design" img="bg-app-design" />
+          <Card text="graphic design" img="bg-graphic-design" />
+        </LinksGrid>
+      </div>
+    </React.Fragment>
   );
 };
 
