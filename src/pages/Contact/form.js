@@ -17,11 +17,11 @@ const Form = () => {
         </div>
       </div>
       <div className="contact__form">
-        <form action="#">
-            <input type="text" placeholder="Name"/>
-            <input type="email" placeholder="Email Address"/>
+        <form action="#" id="contact">
+            <input type="text" placeholder="Name" required/>
+            <input type="email" placeholder="Email Address" required/>
             <input type="phone" placeholder="Phone"/>
-            <textarea cols="30" rows="7" placeholder="Your Message"></textarea>
+            <textarea cols="30" rows="7" placeholder="Your Message" required></textarea>
         </form>
         <Button text="submit" />
       </div>
