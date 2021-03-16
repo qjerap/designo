@@ -3,10 +3,11 @@ import Hero from "./hero";
 import Info from "./info";
 import Locations from "../../components/Locations";
 import "./about.scss";
+import Animation from "../../tool/Animation";
 
 const About = () => {
   return (
-    <React.Fragment>
+    <Animation>
       <div className="bgLeaf500"></div>
       <section className="page__about wrapper">
         <Hero />
@@ -24,7 +25,7 @@ const About = () => {
           text2="We are visual storytellers in appealing and captivating ways. By combining business and marketing strategies, we inspire audiences to take action and drive real results."
         />
       </section>
-    </React.Fragment>
+    </Animation>
   );
 };
 

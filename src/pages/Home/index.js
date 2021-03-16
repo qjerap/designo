@@ -3,10 +3,11 @@ import Hero from "./hero";
 import About from "./about";
 import LinksGrid from "../../components/LinksGrid";
 import Card from "../../components/LinksGrid/card";
+import Animation from "../../tool/Animation";
 
 const Home = () => {
   return (
-    <React.Fragment>
+    <Animation>
       <div className="bgLeaf500"></div>
       <div className="home wrapper">
         <Hero />
@@ -17,7 +18,7 @@ const Home = () => {
         </LinksGrid>
         <About />
       </div>
-    </React.Fragment>
+    </Animation>
   );
 };
 

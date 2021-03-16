@@ -27,27 +27,13 @@ function App() {
       <ScrollToTop />
       <Header />
       <Switch>
-        <Route path="/webdesign">
-          <WebDesign />
-        </Route>
-        <Route path="/appdesign">
-          <AppDesign />
-        </Route>
-        <Route path="/graphicdesign">
-          <GraphicDesign />
-        </Route>
-        <Route path="/about">
-          <About />
-        </Route>
-        <Route path="/locations">
-          <Locations />
-        </Route>
-        <Route path="/contact">
-          <Contact />
-        </Route>
-        <Route path="/">
-          <Home />
-        </Route>
+        <Route path="/webdesign" component={WebDesign} />
+        <Route path="/appdesign" component={AppDesign}/>
+        <Route path="/graphicdesign" component={GraphicDesign} />
+        <Route path="/about" component={About} />
+        <Route path="/locations" component={Locations} />
+        <Route path="/contact" component={Contact} />
+        <Route path="/" component={Home} />
       </Switch>
       <Footer />
     </Router>

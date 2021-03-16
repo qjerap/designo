@@ -2,17 +2,20 @@ import React from "react";
 import DesignHero from "../../components/DesignHero";
 import LinksGrid from "../../components/LinksGrid";
 import Card from "../../components/LinksGrid/card";
+import Animation from "../../tool/Animation";
+
 
 // PORTFOLIO FLEXBOX
 import Portfolio from "../../components/Portfolio";
 import PortfolioCard from "../../components/Portfolio/portfolioCard";
 import fetchData from "./data";
 
+
 const fetchedData = [...fetchData()];
 
 const AppDesign = () => {
   return (
-    <React.Fragment>
+    <Animation>
       <div className="bgLeaf"></div>
       <div className="web-design wrapper">
         <DesignHero />
@@ -33,7 +36,7 @@ const AppDesign = () => {
           <Card text="graphic design" img="bg-graphic-design" />
         </LinksGrid>
       </div>
-    </React.Fragment>
+    </Animation>
   );
 };
 
